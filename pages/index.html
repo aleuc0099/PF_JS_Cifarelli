@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="main_title_box">
-        <h1 id="main_title">PreEntrega número 3 de Alejo Cifarelli</h1>
+        <h1 id="main_title"><strong>entrega final</strong> de Alejo Cifarelli</h1>
     </div>
     <div class="container">
         <div class="introduction_box">
@@ -26,21 +26,23 @@
         </form>
     </div>
     <div id="pokeapi_display">
-        <h2>My Pokemon</h2>
-        <form id="poke_form">
+        <h2 id="poke_title">Mis Pokemon</h2>
+        <h3>En esta sección vas a poder ver a tus Pokemon favoritos y sus stats!</h3>
+        <form  id="poke_form">
             <label for="pokemon_inp"
-                >Type your favourite Pokemon's name</label
+                >Ingresá los nombres de tus Pokemon favoritos</label
             >
             <input
                 id="pokemon_inp"
                 type="text"
-                placeholder="Example: Pikachu"
+                placeholder="Example: pikachu"
             />
-            <button type="submit">search</button>
+            <button id="search_button" type="submit">search</button>
         </form>
         <div id="poke_flow"></div>
     </div>
-
+<!-- CDNS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- my scripts -->
     <script src="/scripts/intro_box.js"></script>
     <script src="/scripts/page_objects.js"></script>

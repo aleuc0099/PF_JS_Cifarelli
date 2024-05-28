@@ -1,4 +1,33 @@
-#poke_flow {
-    display: flex;
-    justify-content: space-between;
+#pokeapi_display {
+    margin: 15px;
+    padding: 20px;
+    border: 5px solid $pokeblue;
+    background-color: $pokeyellow;
+    #poke_title {
+        margin-bottom: 5px;
+        font-size: 34px;
+        font-family: $pokefont;
+    }
+    h3 {
+        margin-bottom: 20px;
+    }
+    #poke_form {
+        height: fit-content;
+        #pokemon_inp {
+            height: 30px;
+            width: 230px;
+            color: $color4;
+        }
+        #pokemon_inp::placeholder {
+            color: $color4;
+        }
+        #search_button{
+            height: 30px;
+            padding: 0 10px;
+        }
+    }
+    #poke_flow {
+        display: flex;
+        justify-content: space-between;
+    }
 }

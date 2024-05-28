@@ -1,9 +1,16 @@
+@font-face {
+  font-family: "Poke_font";
+  src: url(/media/fonts/PocketMonk-15ze.ttf);
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+/* fonts */
+/* colors */
 #main_title_box {
   height: 70px;
   margin: 20px 0;
@@ -12,11 +19,15 @@
   align-items: center;
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
-  background-color: blueviolet;
+  background-color: #915FE8;
 }
 #main_title_box #main_title {
   text-align: center;
   letter-spacing: 3px;
+}
+#main_title_box #main_title strong {
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .container {
@@ -42,7 +53,7 @@
 .container .introduction_box #more_info a {
   margin: 0 5px;
   padding: 5px;
-  color: blueviolet;
+  color: #915FE8;
   text-decoration: none;
   border: 1px solid #000;
   border-radius: 10px;
@@ -52,16 +63,88 @@
 .container .introduction_box #more_info .over {
   margin: 0 5px;
   padding: 5px;
-  color: rgb(253, 234, 255);
+  color: rgb(241, 229, 250);
   text-decoration: none;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: blueviolet;
+  background-color: #915FE8;
   font-family: monospace;
   font-size: 15px;
 }
 
-#poke_flow {
+.form_box {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.form_box #form_p {
+  margin-bottom: 5px;
+  color: #915FE8;
+  font-weight: 500;
+}
+.form_box .big_font {
+  margin-bottom: 5px;
+  color: #915FE8;
+  font-size: 100px;
+  font-weight: 500;
+}
+.form_box #name_form {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.form_box #name_form #name_input {
+  height: 30px;
+  width: 230px;
+  color: #665FE8;
+}
+.form_box #name_form #name_input::-moz-placeholder {
+  color: #665FE8;
+}
+.form_box #name_form #name_input::placeholder {
+  color: #665FE8;
+}
+.form_box #name_form #submit_button {
+  height: 30px;
+  padding: 0 10px;
+}
+.form_box #name_form .off {
+  display: none;
+}
+
+#pokeapi_display {
+  margin: 15px;
+  padding: 20px;
+  border: 5px solid #0075BE;
+  background-color: #FFCC00;
+}
+#pokeapi_display #poke_title {
+  margin-bottom: 5px;
+  font-size: 34px;
+  font-family: "Poke_font";
+}
+#pokeapi_display h3 {
+  margin-bottom: 20px;
+}
+#pokeapi_display #poke_form {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#pokeapi_display #poke_form #pokemon_inp {
+  height: 30px;
+  width: 230px;
+  color: #665FE8;
+}
+#pokeapi_display #poke_form #pokemon_inp::-moz-placeholder {
+  color: #665FE8;
+}
+#pokeapi_display #poke_form #pokemon_inp::placeholder {
+  color: #665FE8;
+}
+#pokeapi_display #poke_form #search_button {
+  height: 30px;
+  padding: 0 10px;
+}
+#pokeapi_display #poke_flow {
   display: flex;
   justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

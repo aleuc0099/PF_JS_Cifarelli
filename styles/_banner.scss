@@ -6,11 +6,15 @@
     align-items: center;
     border-top: 3px solid #000;
     border-bottom: 3px solid #000;
-    background-color: blueviolet;
+    background-color: $color1;
 
     #main_title {
         text-align: center;
         letter-spacing: 3px;
+        strong{
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -38,7 +42,7 @@
             a {
                 margin: 0 5px;
                 padding: 5px;
-                color: blueviolet;
+                color: $color1;
                 text-decoration: none;
                 border: 1px solid #000;
                 border-radius: 10px;
@@ -49,14 +53,49 @@
             .over {
                 margin: 0 5px;
                 padding: 5px;
-                color: rgb(253, 234, 255);
+                color: $color8;
                 text-decoration: none;
                 border: 1px solid #000;
                 border-radius: 10px;
-                background-color: blueviolet;
+                background-color: $color1;
                 font-family: monospace;
                 font-size: 15px;
             }
+        }
+    }
+}
+
+.form_box{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    #form_p{
+        margin-bottom: 5px;
+        color: $color1;
+        font-weight: 500;
+    }
+    .big_font{
+        margin-bottom: 5px;
+        color: $color1;
+        font-size: 100px;
+        font-weight: 500;
+    }
+    #name_form{
+        height: fit-content;
+        #name_input{
+            height: 30px;
+            width: 230px;
+            color: $color4;
+        }
+        #name_input::placeholder{
+            color: $color4;
+        }
+        #submit_button{
+            height: 30px;
+            padding: 0 10px;
+        }
+        .off{
+            display: none;
         }
     }
 }
