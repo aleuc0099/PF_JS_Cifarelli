@@ -120,6 +120,8 @@
 #pokeapi_display #poke_title {
   margin-bottom: 5px;
   font-size: 34px;
+  text-shadow: 2px 0 #0075BE, -2px 0 #0075BE, 0 2px #0075BE, 0 -2px #0075BE, 1px 1px #0075BE, -1px -1px #0075BE, 1px -1px #0075BE, -1px 1px #0075BE;
+  color: #FFCC00;
   font-family: "Poke_font";
 }
 #pokeapi_display h3 {
@@ -130,21 +132,43 @@
   height: fit-content;
 }
 #pokeapi_display #poke_form #pokemon_inp {
-  height: 30px;
+  height: 45px;
   width: 230px;
-  color: #665FE8;
+  border: 2px solid #0075BE;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
 }
 #pokeapi_display #poke_form #pokemon_inp::-moz-placeholder {
-  color: #665FE8;
+  color: #0075BE;
+  font-size: 20px;
 }
 #pokeapi_display #poke_form #pokemon_inp::placeholder {
-  color: #665FE8;
+  color: #0075BE;
+  font-size: 20px;
 }
 #pokeapi_display #poke_form #search_button {
-  height: 30px;
-  padding: 0 10px;
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #0075BE;
+  border: 1px solid #5592b8;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0px 6px 0px #01426b;
+  transition: all 0.1s;
 }
-#pokeapi_display #poke_flow {
+#pokeapi_display #poke_form #search_button:active {
+  box-shadow: 0px 2px 0px #01426b;
+  position: relative;
+  top: 2px;
+}
+
+#poke_flow {
+  margin: 15px;
+  padding: 20px;
+  border: 5px solid #0075BE;
+  background-color: #FFCC00;
   display: flex;
   justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

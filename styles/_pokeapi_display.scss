@@ -6,6 +6,10 @@
     #poke_title {
         margin-bottom: 5px;
         font-size: 34px;
+        text-shadow: 2px 0 $pokeblue, -2px 0 $pokeblue, 0 2px $pokeblue,
+            0 -2px $pokeblue, 1px 1px $pokeblue, -1px -1px $pokeblue,
+            1px -1px $pokeblue, -1px 1px $pokeblue;
+        color: $pokeyellow;
         font-family: $pokefont;
     }
     h3 {
@@ -14,20 +18,41 @@
     #poke_form {
         height: fit-content;
         #pokemon_inp {
-            height: 30px;
+            height: 45px;
             width: 230px;
-            color: $color4;
+            border: 2px solid $pokeblue;
+            border-radius: 10px;
+            color: black;
+            font-size: 20px;
         }
         #pokemon_inp::placeholder {
-            color: $color4;
+            color: $pokeblue;
+            font-size: 20px;
         }
-        #search_button{
-            height: 30px;
-            padding: 0 10px;
+        #search_button {
+            color: #ecf0f1;
+            font-size: 17px;
+            background-color: $pokeblue;
+            border: 1px solid #5592b8;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            box-shadow: 0px 6px 0px #01426b;
+            transition: all 0.1s;
+        }
+        #search_button:active {
+            box-shadow: 0px 2px 0px #01426b;
+            position: relative;
+            top: 2px;
         }
     }
-    #poke_flow {
-        display: flex;
-        justify-content: space-between;
-    }
+}
+#poke_flow {
+
+    margin: 15px;
+    padding: 20px;
+    border: 5px solid $pokeblue;
+    background-color: $pokeyellow;
+    display: flex;
+    justify-content: space-between;
 }
