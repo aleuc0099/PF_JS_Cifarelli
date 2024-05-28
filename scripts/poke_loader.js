@@ -1,4 +1,5 @@
 const pokeapi = "https://pokeapi.co/api/v2/pokemon/";
+const poketype = "https://pokeapi.co/api/v2/type/";
 function get_pokemon_data(pokemon_name) {
     return fetch(`${pokeapi}${pokemon_name}`)
         .then((response) => response.json())
@@ -6,6 +7,7 @@ function get_pokemon_data(pokemon_name) {
             console.error("Error fetching Pokemon data: ", error);
         });
 }
+
 function create_pokemon_element(pokemon) {
     const pokemon_element = document.createElement("div");
     container_flow.appendChild(pokemon_element);
@@ -19,8 +21,18 @@ function create_pokemon_element(pokemon) {
     pokemon_name.textContent =
         pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     const pokemon_details = document.createElement("p");
-    pokemon_element.appendChild(pokemon_details);
-    pokemon_details.textContent = `Height: ${pokemon.height} | Weight: ${pokemon.weight}`;
+    pokemon_details.classList.add("poke_details");
+    let poke_text = document.createElement("div");
+    pokemon_element.appendChild(poke_text);
+    poke_text.appendChild(pokemon_details);
+    poke_text.classList.add("poke_text")
+    let types = pokemon.types.forEach((type) => {
+        let types = document.createTextNode("span");
+        types.textContent = type["type"]["name"];
+        console.log(types);
+        poke_text.appendChild(types);
+    });
+    pokemon_details.textContent = `Pokedex # ${pokemon.id} Tipo:` + " ";
     return pokemon_element;
 }
 
@@ -35,19 +47,25 @@ function show_pokemon(pokemon_name) {
 }
 
 function save_poke_element() {
-    const poke_name = [];
-    poke_name.push(pokemon_input.value);
-    const json_poke_name = JSON.stringify(poke_name);
-    localStorage.setItem("poke_name", json_poke_name);
-    poke_name_list.push(pokemon_input.value);
-    const json_poke_name_list = JSON.stringify(poke_name_list);
-    localStorage.setItem("poke_name_list", json_poke_name_list);
+    if (poke_name_list.length <= 4) {
+        const poke_name = [];
+        poke_name.push(pokemon_input.value);
+        const json_poke_name = JSON.stringify(poke_name);
+        localStorage.setItem("poke_name", json_poke_name);
+        poke_name_list.push(pokemon_input.value);
+        const json_poke_name_list = JSON.stringify(poke_name_list);
+        localStorage.setItem("poke_name_list", json_poke_name_list);
+    } else {
+        poke_form.classList.toggle("hide");
+        poke_ready.classList.toggle("hide");
+    }
 }
 
 const pokeapi_display = document.querySelector("#pokeapi_display");
 const poke_form = document.querySelector("#poke_form");
 const pokemon_input = document.querySelector("#pokemon_inp");
 const container_flow = document.querySelector("#poke_flow");
+const poke_ready = document.querySelector("#poke_ready");
 const poke_name_list = [];
 
 poke_form.addEventListener("submit", (e) => {
@@ -60,3 +78,13 @@ poke_form.addEventListener("submit", (e) => {
         show_pokemon(updated_poke_array)
     );
 });
+
+/* 
+function get_pokemon_type(pokemon_name) {
+    return fetch(`${poketype}${pokemon_name}`)
+        .then((response) => response.json())
+        .catch((error) => {
+            console.error("Error fetching Pokemon data: ", error);
+        });
+}
+*/

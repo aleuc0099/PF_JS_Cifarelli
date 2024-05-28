@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,8 +34,7 @@
         <div id="pokeapi_display">
             <h2 id="poke_title">Mis Pokemon</h2>
             <h3>
-                En esta sección vas a poder ver a tus Pokemon favoritos y sus
-                stats!
+                En esta sección vas a poder crear tu equipo pokemon favorito!
             </h3>
             <form id="poke_form">
                 <label for="pokemon_inp"
@@ -44,13 +43,14 @@
                 <input
                     id="pokemon_inp"
                     type="text"
-                    placeholder="Example: pikachu"
+                    placeholder="Ejemplo: pikachu"
                     required
                     oninvalid="this.setCustomValidity('Ingresá un Pokenombre!')"
                     oninput="setCustomValidity('')"
                 />
                 <button id="search_button" type="submit">search</button>
             </form>
+            <p id="poke_ready" class="hide">Tu equipo Pokemón está listo!"</p>
         </div>
         <div id="poke_flow"></div>
         <!-- CDNS -->
