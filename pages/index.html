@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>PROYECTO FINAL JS</title>
+</head>
+<body>
+    <div id="pokeapi_display">
+        <h2>My Pokemon</h2>
+        <form id="poke_form">
+            <label for="pokemon_inp"
+                >Type your favourite Pokemon's name</label
+            >
+            <input
+                id="pokemon_inp"
+                type="text"
+                placeholder="Example: Pikachu"
+            />
+            <button type="submit">search</button>
+        </form>
+        <div id="poke_flow"></div>
+    </div>
+
+    <!-- my scripts -->
+    <script src="/scripts/page_objects.js"></script>
+    <script src="/scripts/poke_loader.js"></script>
+</body>
+</html>
