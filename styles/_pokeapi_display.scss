@@ -46,10 +46,10 @@
             top: 2px;
         }
     }
-    .hide{
+    .hide {
         display: none;
     }
-    #poke_ready{
+    #poke_ready {
         text-align: center;
         font-size: 35px;
     }
@@ -71,7 +71,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        img{
+        img {
             background-color: rgb(60, 160, 60);
             border: 3px solid $pokeblue;
             border-bottom: 0;
@@ -86,7 +86,7 @@
             color: $pokeyellow;
             font-family: $pokefont;
         }
-        .poke_text{
+        .poke_text {
             display: flex;
             justify-content: center;
             flex-direction: column;

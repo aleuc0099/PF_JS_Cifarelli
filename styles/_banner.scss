@@ -11,7 +11,7 @@
     #main_title {
         text-align: center;
         letter-spacing: 3px;
-        strong{
+        strong {
             text-transform: uppercase;
             text-decoration: underline;
         }
@@ -65,36 +65,36 @@
     }
 }
 
-.form_box{
+.form_box {
     margin-top: 30px;
     margin-left: 10px;
     margin-bottom: 20px;
-    #form_p{
+    #form_p {
         margin-bottom: 5px;
         color: $color1;
         font-weight: 500;
     }
-    .big_font{
+    .big_font {
         margin-bottom: 5px;
         color: $color1;
         font-size: 100px;
         font-weight: 500;
     }
-    #name_form{
+    #name_form {
         height: fit-content;
-        #name_input{
+        #name_input {
             height: 30px;
             width: 230px;
             color: $color4;
         }
-        #name_input::placeholder{
+        #name_input::placeholder {
             color: $color4;
         }
-        #submit_button{
+        #submit_button {
             height: 30px;
             padding: 0 10px;
         }
-        .off{
+        .off {
             display: none;
         }
     }

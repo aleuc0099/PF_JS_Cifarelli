@@ -6,21 +6,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 /* fonts */
 $pokefont: "Poke_font";
 /* colors */
-$color1: #915FE8;
-$color2: #E85FE1;
-$color3: #BF5FE8;
-$color4: #665FE8;
-$color5: #E85F8F;
-$color6: #D194EB;
+$color1: #915fe8;
+$color2: #e85fe1;
+$color3: #bf5fe8;
+$color4: #665fe8;
+$color5: #e85f8f;
+$color6: #d194eb;
 $color7: rgb(180, 153, 199);
 $color8: rgb(241, 229, 250);
-$pokeblue: #0075BE;
-$pokeyellow: #FFCC00;
+$pokeblue: #0075be;
+$pokeyellow: #ffcc00;
 
 // imports
 @import "_banner";

@@ -46,7 +46,7 @@ function save_name(e) {
         showCancelButton: true,
         confirmButtonText: "Sí",
         denyButtonText: `No`,
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire("Bienvenido!", "", "success");

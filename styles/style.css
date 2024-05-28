@@ -19,7 +19,7 @@
   align-items: center;
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
-  background-color: #915FE8;
+  background-color: #915fe8;
 }
 #main_title_box #main_title {
   text-align: center;
@@ -53,7 +53,7 @@
 .container .introduction_box #more_info a {
   margin: 0 5px;
   padding: 5px;
-  color: #915FE8;
+  color: #915fe8;
   text-decoration: none;
   border: 1px solid #000;
   border-radius: 10px;
@@ -67,7 +67,7 @@
   text-decoration: none;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: #915FE8;
+  background-color: #915fe8;
   font-family: monospace;
   font-size: 15px;
 }
@@ -79,12 +79,12 @@
 }
 .form_box #form_p {
   margin-bottom: 5px;
-  color: #915FE8;
+  color: #915fe8;
   font-weight: 500;
 }
 .form_box .big_font {
   margin-bottom: 5px;
-  color: #915FE8;
+  color: #915fe8;
   font-size: 100px;
   font-weight: 500;
 }
@@ -95,13 +95,13 @@
 .form_box #name_form #name_input {
   height: 30px;
   width: 230px;
-  color: #665FE8;
+  color: #665fe8;
 }
 .form_box #name_form #name_input::-moz-placeholder {
-  color: #665FE8;
+  color: #665fe8;
 }
 .form_box #name_form #name_input::placeholder {
-  color: #665FE8;
+  color: #665fe8;
 }
 .form_box #name_form #submit_button {
   height: 30px;
@@ -114,14 +114,14 @@
 #pokeapi_display {
   margin: 15px;
   padding: 20px;
-  border: 5px solid #0075BE;
-  background-color: #FFCC00;
+  border: 5px solid #0075be;
+  background-color: #ffcc00;
 }
 #pokeapi_display #poke_title {
   margin-bottom: 5px;
   font-size: 34px;
-  text-shadow: 2px 0 #0075BE, -2px 0 #0075BE, 0 2px #0075BE, 0 -2px #0075BE, 1px 1px #0075BE, -1px -1px #0075BE, 1px -1px #0075BE, -1px 1px #0075BE;
-  color: #FFCC00;
+  text-shadow: 2px 0 #0075be, -2px 0 #0075be, 0 2px #0075be, 0 -2px #0075be, 1px 1px #0075be, -1px -1px #0075be, 1px -1px #0075be, -1px 1px #0075be;
+  color: #ffcc00;
   font-family: "Poke_font";
 }
 #pokeapi_display h3 {
@@ -134,23 +134,23 @@
 #pokeapi_display #poke_form #pokemon_inp {
   height: 45px;
   width: 230px;
-  border: 2px solid #0075BE;
+  border: 2px solid #0075be;
   border-radius: 10px;
   color: black;
   font-size: 20px;
 }
 #pokeapi_display #poke_form #pokemon_inp::-moz-placeholder {
-  color: #0075BE;
+  color: #0075be;
   font-size: 20px;
 }
 #pokeapi_display #poke_form #pokemon_inp::placeholder {
-  color: #0075BE;
+  color: #0075be;
   font-size: 20px;
 }
 #pokeapi_display #poke_form #search_button {
   color: #ecf0f1;
   font-size: 17px;
-  background-color: #0075BE;
+  background-color: #0075be;
   border: 1px solid #5592b8;
   border-radius: 5px;
   cursor: pointer;
@@ -174,8 +174,8 @@
 #poke_flow {
   margin: 15px;
   padding: 20px;
-  border: 5px solid #FFCC00;
-  background-color: #0075BE;
+  border: 5px solid #ffcc00;
+  background-color: #0075be;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   justify-content: space-between;
@@ -183,7 +183,7 @@
 #poke_flow .pokemon {
   margin: 5px;
   background-color: #b1b1b1;
-  border: 10px solid #FFCC00;
+  border: 10px solid #ffcc00;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -192,22 +192,22 @@
 }
 #poke_flow .pokemon img {
   background-color: rgb(60, 160, 60);
-  border: 3px solid #0075BE;
+  border: 3px solid #0075be;
   border-bottom: 0;
 }
 #poke_flow .pokemon h2 {
-  border: 3px solid #0075BE;
+  border: 3px solid #0075be;
   border-top: 0;
   border-bottom: 0;
-  text-shadow: 2px 0 #0075BE, -2px 0 #0075BE, 0 2px #0075BE, 0 -2px #0075BE, 1px 1px #0075BE, -1px -1px #0075BE, 1px -1px #0075BE, -1px 1px #0075BE;
-  color: #FFCC00;
+  text-shadow: 2px 0 #0075be, -2px 0 #0075be, 0 2px #0075be, 0 -2px #0075be, 1px 1px #0075be, -1px -1px #0075be, 1px -1px #0075be, -1px 1px #0075be;
+  color: #ffcc00;
   font-family: "Poke_font";
 }
 #poke_flow .pokemon .poke_text {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 3px solid #0075BE;
+  border: 3px solid #0075be;
   border-top: 0;
 }
 #poke_flow .pokemon .poke_details {

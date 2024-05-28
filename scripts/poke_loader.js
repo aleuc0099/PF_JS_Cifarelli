@@ -1,5 +1,4 @@
 const pokeapi = "https://pokeapi.co/api/v2/pokemon/";
-const poketype = "https://pokeapi.co/api/v2/type/";
 function get_pokemon_data(pokemon_name) {
     return fetch(`${pokeapi}${pokemon_name}`)
         .then((response) => response.json())
@@ -25,7 +24,7 @@ function create_pokemon_element(pokemon) {
     let poke_text = document.createElement("div");
     pokemon_element.appendChild(poke_text);
     poke_text.appendChild(pokemon_details);
-    poke_text.classList.add("poke_text")
+    poke_text.classList.add("poke_text");
     let types = pokemon.types.forEach((type) => {
         let types = document.createTextNode("span");
         types.textContent = type["type"]["name"];
@@ -77,13 +76,3 @@ poke_form.addEventListener("submit", (e) => {
         show_pokemon(updated_poke_array)
     );
 });
-
-/* 
-function get_pokemon_type(pokemon_name) {
-    return fetch(`${poketype}${pokemon_name}`)
-        .then((response) => response.json())
-        .catch((error) => {
-            console.error("Error fetching Pokemon data: ", error);
-        });
-}
-*/
