@@ -29,7 +29,6 @@ function create_pokemon_element(pokemon) {
     let types = pokemon.types.forEach((type) => {
         let types = document.createTextNode("span");
         types.textContent = type["type"]["name"];
-        console.log(types);
         poke_text.appendChild(types);
     });
     pokemon_details.textContent = `Pokedex # ${pokemon.id} Tipo:` + " ";
