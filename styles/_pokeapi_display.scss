@@ -46,13 +46,36 @@
             top: 2px;
         }
     }
-    .hide {
-        display: none;
-    }
     #poke_ready {
         text-align: center;
         font-size: 35px;
     }
+    #save_button_box {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #save_team_button {
+            color: #ecf0f1;
+            font-size: 17px;
+            background-color: $pokeblue;
+            border: 1px solid #5592b8;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            box-shadow: 0px 6px 0px #01426b;
+            transition: all 0.1s;
+        }
+        #save_team_button:active {
+            box-shadow: 0px 2px 0px #01426b;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.hide {
+    display: none !important;
 }
 #poke_flow {
     margin: 15px;
@@ -96,6 +119,21 @@
         .poke_details {
             font-size: 15px;
             padding-right: 2px;
+        }
+    }
+}
+
+#team_list_box{
+    margin-left: 40px;
+    margin-bottom: 30px;
+    ul{
+        color: $pokeblue;
+        font-family: $pokefont;
+        display: flex;
+        li{
+            background-color: $pokeyellow;
+            padding-left: 3px;
+            list-style: none;
         }
     }
 }

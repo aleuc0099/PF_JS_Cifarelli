@@ -34,7 +34,6 @@ function show_name() {
     } else {
         paragraph.textContent = "Hola visitante!";
     }
-    food_form.classList.toggle("appear");
 }
 
 function save_name(e) {
@@ -57,6 +56,8 @@ function save_name(e) {
         }
     });
 }
+
+
 
 let form = document.querySelector("#name_form");
 form.addEventListener("submit", save_name);

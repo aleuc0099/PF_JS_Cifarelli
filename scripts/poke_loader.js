@@ -50,13 +50,14 @@ function save_poke_element() {
         poke_name.push(pokemon_input.value);
         const json_poke_name = JSON.stringify(poke_name);
         localStorage.setItem("poke_name", json_poke_name);
-        poke_name_list.push(pokemon_input.value);
-        const json_poke_name_list = JSON.stringify(poke_name_list);
-        localStorage.setItem("poke_name_list", json_poke_name_list);
     } else {
         poke_form.classList.toggle("hide");
         poke_ready.classList.toggle("hide");
+        save_team_button.classList.toggle("hide");
     }
+    poke_name_list.push(pokemon_input.value);
+    const json_poke_name_list = JSON.stringify(poke_name_list);
+    localStorage.setItem("poke_name_list", json_poke_name_list);
 }
 
 const pokeapi_display = document.querySelector("#pokeapi_display");
@@ -64,7 +65,42 @@ const poke_form = document.querySelector("#poke_form");
 const pokemon_input = document.querySelector("#pokemon_inp");
 const container_flow = document.querySelector("#poke_flow");
 const poke_ready = document.querySelector("#poke_ready");
+const save_team_button = document.querySelector("#save_team_button");
 const poke_name_list = [];
+
+save_team_button.addEventListener("click", (e) => {
+    e.preventDefault;
+    Swal.fire({
+        title: `¿Estás seguro?`,
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Sí",
+        denyButtonText: `No`,
+        cancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire("Equipo guardado!", "", "success");
+            container_flow.classList.toggle("hide");
+            save_team_button.classList.toggle("hide");
+            let team = localStorage.getItem("poke_name_list");
+            let team_array = JSON.parse(team);
+            let team_list_box = document.querySelector("#team_list_box");
+            let team_list = document.createElement("ul");
+            team_list_box.appendChild(team_list);
+            team_list.textContent = "My team: ";
+            let team_object = { ...team_array };
+            for (const property in team_object) {
+                let li = document.createElement("li");
+                team_list.appendChild(li);
+                li.textContent = `/${team_object[property]}/`;
+                const json_team_object = JSON.stringify(team_object);
+                localStorage.setItem("team", json_team_object);
+            }
+        } else if (result.isDenied) {
+            Swal.fire("El equipo no fue guardado", "", "info");
+        }
+    });
+});
 
 poke_form.addEventListener("submit", (e) => {
     e.preventDefault();
